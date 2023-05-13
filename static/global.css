@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -15,4 +17,21 @@
 
 .black-bkg-color {
 	background-color: var(--black-color);
+}
+
+body {
+	margin: 0 100px;
+	background: #422d5d;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+li {
+	color: #decff1;
+	font-family: 'VT323', monospace;
+	font-weight: normal;
 }
