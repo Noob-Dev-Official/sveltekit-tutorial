@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Title from '$lib/Title.svelte';
-
 	let title: string = 'hello';
 
 	const updateTitle = () => {
@@ -12,7 +10,6 @@
 	<title>Home</title>
 </svelte:head>
 
-<Title />
 <div class="index">
 	<h2>Some Title</h2>
 	<p>

@@ -1,12 +1,9 @@
 <script lang="ts">
-	import Title from '$lib/Title.svelte';
 </script>
 
 <svelte:head>
 	<title>About</title>
 </svelte:head>
-
-<Title title="About" />
 
 <div class="about">
 	<h2>About Us</h2>
