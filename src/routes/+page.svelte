@@ -1,10 +1,14 @@
-<script>
-	let title = 'hello';
+<script lang="ts">
+	let title: string = 'hello';
 
 	const updateTitle = () => {
 		title = 'different';
 	};
 </script>
+
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
 
 <div class="index">
 	<h2>Some Title</h2>
@@ -16,12 +20,18 @@
 	<button on:click={updateTitle}>Change Title</button>
 
 	<input type="text" bind:value={title} />
+
+	<a href="/about">About</a>
+	<a href="/guides">Guide</a>
 </div>
 
-<style>
+<style lang="scss">
 	.index {
 		text-align: center;
 		display: block;
-		color: var(--red-color);
+
+		p {
+			color: var(--yellow-color);
+		}
 	}
 </style>

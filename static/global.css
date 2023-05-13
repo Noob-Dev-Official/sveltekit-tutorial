@@ -6,4 +6,13 @@
 
 :root {
 	--black-color: '#1e1e1e';
+	--yellow-color: '#ffdd4a';
+}
+
+.black-text-color {
+	color: var(--black-color);
+}
+
+.black-bkg-color {
+	background-color: var(--black-color);
 }
