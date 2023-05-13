@@ -1,11 +1,37 @@
+<!-- context="module" -->
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	let guides: any;
+	onMount(async () => {
+		guides = await fetchData();
+	});
+
+	const fetchData = async () => {
+		const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+		const guides = await res.json();
+
+		if (res.ok) {
+			return guides;
+		}
+	};
+</script>
+
 <svelte:head>
 	<title>Guides</title>
 </svelte:head>
 
 <div class="guides">
 	<ul>
-		<li><a href="/">guide 1</a></li>
-		<li><a href="/">guide 2</a></li>
+		{#await fetchData()}
+			<p>loading...</p>
+		{:then data}
+			{#each data as guide}
+				<li>
+					<a href="/">{guide.title}</a>
+				</li>
+			{/each}
+		{/await}
 	</ul>
 </div>
 

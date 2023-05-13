@@ -29,9 +29,5 @@
 	.index {
 		text-align: center;
 		display: block;
-
-		p {
-			color: var(--yellow-color);
-		}
 	}
 </style>
