@@ -18,5 +18,5 @@ export const POST = async (req) => {
 
 	comments.push(newComment);
 
-	return json(newComment, { status: 200 });
+	return json(newComment, { status: 201 });
 };
