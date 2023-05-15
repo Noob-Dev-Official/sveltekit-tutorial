@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+
 	let title: string = 'hello';
 
 	const updateTitle = () => {
 		title = 'different';
+	};
+
+	const onDocsBtnClick = () => {
+		goto('/docs');
 	};
 </script>
 
@@ -18,6 +24,7 @@
 	</p>
 
 	<button on:click={updateTitle}>Change Title</button>
+	<button on:click={onDocsBtnClick}>Docs</button>
 
 	<input type="text" bind:value={title} />
 
